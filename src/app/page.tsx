@@ -4,6 +4,7 @@ import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import {LogInIcon} from "lucide-react"
 import React from "react";
+import FileUpload from "@/components/FileUpload";
 
 const Home = async () => {
   const { userId } = await auth();
@@ -24,7 +25,7 @@ const Home = async () => {
             and understand research with AI
           </p>
           <div className="w-full mt-4">
-            {isAuth? (<h1>FileUpload</h1>):(
+            {isAuth? (<FileUpload/>):(
               <Link href='/sign-in'>
               <Button>Login to get Started
                <LogInIcon className="w-4 h-4 ml-2"></LogInIcon>

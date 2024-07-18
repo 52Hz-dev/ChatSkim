@@ -1,5 +1,5 @@
 import {neon,neonConfig} from "@neondatabase/serverless"
-import {} from "drizzle-orm/neon-http"
+import {drizzle} from "drizzle-orm/neon-http"
 neonConfig.fetchConnectionCache=true;
 
 if(!process.env.DATABASE_URL){
